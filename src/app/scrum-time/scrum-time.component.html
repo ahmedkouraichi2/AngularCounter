@@ -1,0 +1,77 @@
+<div id="entete">
+  En tête
+ </div>
+ 
+ <div id="main">
+  <div id="menu">
+    <div class="container">
+      <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Methods</mat-label>
+            <input >
+            <mat-autocomplete #auto="matAutocomplete" >
+              <mat-option >
+                option
+              </mat-option>
+              <mat-option >
+                option
+              </mat-option>
+              <mat-option >
+                optio
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+       
+    </div>
+   Menu
+  </div>
+ 
+  <div id="contenu">
+    <!-- <div class="dual-select-container">
+      <div class=" box available-options">
+        <h4>Available </h4>
+        <ul>
+          <li *ngFor="let option of availableOptions">
+            <button (click)="selectOption(option)">{{ option }}</button>
+          </li>
+        </ul>
+      </div>
+    
+      <div class=" box selected-options">
+        <h4>Selected </h4>
+        <ul>
+          <li *ngFor="let option of selectedOptions">
+            <button (click)="deselectOption(option)">{{ option }}</button>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <div class="dual-select-container">
+  <select multiple class="available-options" [(ngModel)]="availableOptions" id="availableOptions">
+    <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+  </select>
+
+  <div class="button-container">
+    <button class="select-button" (click)="selectOptions()"> &gt;&gt;</button>
+    <button class="deselect-button" (click)="deselectOptions()">&lt;&lt;</button>
+  </div>
+
+  <select multiple class="selected-options" [(ngModel)]="selectedOptions" id="selectedOptions">
+  </select>
+</div>
+
+  </div>
+ </div>
+ 
+ <div id="footer">
+  <section>
+    <div class="example-button-row" style="display: flex; justify-content: space-between; align-items: center;">
+      <button mat-raised-button style="margin-left: 150px;">Back</button>
+      <button mat-raised-button style="margin-right: 150px;">Next</button>
+    </div>
+  </section>
+  
+ </div>
+ 

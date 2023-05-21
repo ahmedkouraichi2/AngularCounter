@@ -1,0 +1,51 @@
+.radio-content {
+  display: flex;
+  align-items: center;
+}
+
+.close-icon {
+  margin-left: 8px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}  
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid red;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+table{
+  margin-top: 30px;
+  padding: 20px;
+}
+p {
+  padding: 20px;
+}
+
+.custom-checkbox input[type="checkbox"]:checked::before {
+  content: 'X';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: red;
+  font-size: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content:center;
+  margin-top: 20px;
+}
+

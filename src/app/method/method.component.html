@@ -1,0 +1,21 @@
+<div class="container">
+     <section>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Methods</mat-label>
+            <input plaveholder="auto" type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+     </section>
+    <section>
+      <div class="example-button-row">
+          <button mat-raised-button (click)="navigateToDataset()">Next</button>
+          
+      </div>
+    </section>
+</div>

@@ -1,0 +1,44 @@
+<p>Selected method: Scrum<br>Minimum set of attributes:</p>
+
+<div class="checkbox-container">
+  <table>
+    <tr>
+      <td>Sprint Id</td>
+      <td><mat-checkbox [(ngModel)]="selectedOptions" value="sprintId" class="custom-checkbox"></mat-checkbox></td>
+    </tr>
+    <tr>
+      <td>Project Id</td>
+      <td><mat-checkbox [(ngModel)]="selectedOptions" value="ProjectId" class="custom-checkbox"></mat-checkbox></td>
+    </tr>
+    <tr>
+      <td>Issue Id</td>
+      <td><mat-checkbox [(ngModel)]="selectedOptions" value="IssueId" class="custom-checkbox"></mat-checkbox></td>
+    </tr>
+    <tr>
+      <td>Tasks</td>
+      <td><mat-checkbox [(ngModel)]="selectedOptions" value="Tasks" class="custom-checkbox"></mat-checkbox></td>
+    </tr>
+    <tr>
+      <td>Resource</td>
+      <td><mat-checkbox [(ngModel)]="selectedOptions" value="Resource" class="custom-checkbox"></mat-checkbox></td>
+    </tr>
+    <tr>
+      <td>Timestamp</td>
+      <td><mat-checkbox [(ngModel)]="selectedOptions" value="Timestamp" class="custom-checkbox"></mat-checkbox></td>
+    </tr>
+  </table>
+</div>
+<div class="button-container">
+  <button mat-raised-button class="submit-button">OPEN DATA SET FILE</button>
+</div>
+
+<section>
+  <div class="example-button-row">
+    <button mat-raised-button>Next</button>
+  </div>
+</section>
+<section>
+  <div class="other-button-row">
+    <button mat-raised-button (click)="goBack()">Back</button>
+  </div>
+</section>
